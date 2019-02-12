@@ -93,7 +93,7 @@ import os
 import random
 
 def generate():
-    max_length = int(os.getenv("PLANS_MAX_LENGTH", 8))
+    max_length = int(os.getenv("PLANS_MAX_LENGTH", 6))
     length = random.randint(1, max_length)
     lists = random.choices(all_lists, k=length)
     text = " ".join([random.choice(l) for l in lists])

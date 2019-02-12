@@ -20,3 +20,8 @@ def new(request):
     plan = Plan(text=text)
     plan.save()
     return redirect(detail, plan.pk)
+
+def latest(request):
+    plans = Plan.objects.all().order_by('-pk')[:10]
+    context = {'plans': plans}
+    return render(request, 'latest.html', context)
