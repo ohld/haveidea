@@ -24,7 +24,10 @@
     <div class="wrapper">
         <div class="title header center-text">I'm going to</div>
         <div class="plan-text center-text">{{ plan.text }}</div>
-        <div class="share footer center-text"><a href="/{{ plan.pk }}/">Link to this page</a></div>
+        <div class="share footer center-text">
+            <a href="/{{ plan.pk }}/">Link to this page</a>
+            <a href="/new/">Generate another</a>
+        </div>
     </div>
 
 {% else %}
