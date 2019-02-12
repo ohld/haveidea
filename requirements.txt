@@ -1,0 +1,6 @@
+psycopg2-binary
+gunicorn
+
+django
+django-heroku
+django-social-share
