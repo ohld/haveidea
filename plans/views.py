@@ -12,6 +12,10 @@ def index(request):
 def detail(request, plan_id):
     plan = get_object_or_404(Plan, pk=plan_id)
 
+    if isinstance(plan, Plan):
+        plan.views += 1
+        plan.save()
+
     context = {'plan': plan}
     return render(request, 'plan.html', context)
 
