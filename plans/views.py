@@ -29,3 +29,8 @@ def latest(request):
     plans = Plan.objects.all().order_by('-pk')[:10]
     context = {'plans': plans}
     return render(request, 'latest.html', context)
+
+def top(request):
+    plans = Plan.objects.all().order_by('-views')[:10]
+    context = {'plans': plans}
+    return render(request, 'top.html', context)

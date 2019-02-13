@@ -20,13 +20,15 @@
 <link rel="stylesheet" type="text/css" href="{% static 'plan.css' %}">
 
 <div class="wrapper">
+    {% block header %}
         <div class="title header center-text">Latest plans</div>
-        <div class="plan-text center-text" id="center">
-            <ul>
-            {% for plan in plans %}
-                <li><a href="/{{ plan.pk }}/">{{ plan.text }}</a></li>
-            {% endfor %}
-            </ul>
-        </div>
-        <div class="share center-text" id="footer"><a href="/">Want some more?</a></div>
+    {% endblock %}
+    <div class="plan-text center-text" id="center">
+        <ul>
+        {% for plan in plans %}
+            <li><a href="/{{ plan.pk }}/">{{ plan.text }}</a></li>
+        {% endfor %}
+        </ul>
     </div>
+    <div class="share center-text" id="footer"><a href="/">Want some more?</a></div>
+</div>

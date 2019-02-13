@@ -22,11 +22,11 @@
 
 {% if plan %}
     <div class="wrapper">
-        <div class="title header center-text">I'm going to</div>
+        <div class="title header center-text">My Plan is</div>
         <div class="plan-text center-text">{{ plan.text }}</div>
         <div class="share center-text" id="footer">
             <ul>
-                <li><a href="/{{ plan.pk }}/" >Share this</a></li>
+                <li><a href="/{{ plan.pk }}/" >Viewed {{ plan.views }} times</a></li>
                 <li><a href="/new/" >Generate another</a></li>
                 <li><a href="/">Go home</a></li>
             </ul>
