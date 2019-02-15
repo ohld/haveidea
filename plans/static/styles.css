@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Pribambas';
+    src: url('Pribambas-Regular.eot');
+}
+
+body {
+    font-family: 'Pribambas', 'sans-serif';
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+  }
+  
+  header.masthead {
+    position: relative;
+    background-color: #343a40;
+    background-size: cover;
+    padding-top: 8rem;
+    height: 100vh;
+  }
+  
+  header.masthead .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+  
+  header.masthead h1 {
+    font-size: 6rem;
+  }
+
+  header.masthead .idea-text {
+    font-size: 10rem;
+    padding-top: 3rem;
+  }
+
+  header.masthead .btn {
+    font-size: 3rem;
+  }
+  
+  /* for desktops */
+  @media (min-width: 768px) {
+    header.masthead {
+        padding-top: 7rem;
+    }
+    header.masthead h1 {
+        font-size: 8rem;
+    }
+    header.masthead .idea-text {
+        font-size: 8rem;
+        padding-top: 5rem;
+    }
+  }
+  
+
+
+
+  .showcase .showcase-text {
+    font-size: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
+  
+  .showcase .showcase-ideas {
+    padding-bottom: 3rem;
+    font-size: 3rem;
+    /* min-height: 30rem; */
+    /* background-size: cover; */
+  }
+
+  .showcase .showcase-ideas li {
+    /* display: inline; */
+    list-style-type: none;
+  }
+
+
+
+
+  
+  .features-icons {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  
+  .features-icons .features-icons-item {
+    max-width: 20rem;
+  }
+  
+  .features-icons .features-icons-item .features-icons-icon {
+    height: 7rem;
+  }
+  
+  .features-icons .features-icons-item .features-icons-icon i {
+    font-size: 4.5rem;
+  }
+  
+  .features-icons .features-icons-item:hover .features-icons-icon i {
+    font-size: 5rem;
+  }
+  
+  .testimonials {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  
+  .testimonials .testimonial-item {
+    max-width: 18rem;
+  }
+  
+  .testimonials .testimonial-item img {
+    max-width: 12rem;
+    -webkit-box-shadow: 0px 5px 5px 0px #adb5bd;
+    box-shadow: 0px 5px 5px 0px #adb5bd;
+  }
+  
+  .call-to-action {
+    position: relative;
+    background-color: #343a40;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  
+  .call-to-action .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+  
+  footer.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .idea-footer {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    /* .idea-footer {
+        padding-top: 10rem;
+        padding-bottom: 5rem;
+        font-size: 2rem;
+      } */
+  }

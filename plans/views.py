@@ -7,7 +7,11 @@ from .generate.plan import generate
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    context = {
+        'top': Plan.objects.all().order_by('-views')[:10],
+        'recent': Plan.objects.all().order_by('-pk')[:10]
+    }
+    return render(request, 'index.html', context)
 
 def detail(request, plan_id):
     plan = get_object_or_404(Plan, pk=plan_id)
@@ -16,8 +20,8 @@ def detail(request, plan_id):
         plan.views += 1
         plan.save()
 
-    context = {'plan': plan}
-    return render(request, 'plan.html', context)
+    context = { 'plan': plan }
+    return render(request, 'detail.html', context)
 
 def new(request):
     text = generate()
