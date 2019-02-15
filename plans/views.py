@@ -25,16 +25,15 @@ def detail(request, plan_id):
 
 def new(request):
     text = generate()
-    plan = Plan(text=text)
-    plan.save()
+    plan, _ = Plan.objects.get_or_create(text=text)
     return redirect(detail, plan.pk)
 
-def latest(request):
-    plans = Plan.objects.all().order_by('-pk')[:10]
-    context = {'plans': plans}
-    return render(request, 'latest.html', context)
+# def latest(request):
+#     plans = Plan.objects.all().order_by('-pk')[:10]
+#     context = {'plans': plans}
+#     return render(request, 'latest.html', context)
 
-def top(request):
-    plans = Plan.objects.all().order_by('-views')[:10]
-    context = {'plans': plans}
-    return render(request, 'top.html', context)
+# def top(request):
+#     plans = Plan.objects.all().order_by('-views')[:10]
+#     context = {'plans': plans}
+#     return render(request, 'top.html', context)
