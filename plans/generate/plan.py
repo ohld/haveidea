@@ -63,10 +63,6 @@ travel = [
     '🛥', '🛳', '⛴', '🚢', '⚓️', '⛽️'
 ]
 
-all_lists = [
-    sentiments, hands, people, clothings, foods, sports, travel
-]
-
 stuff = [
     '⌚️', '📱', '📲', '💻', '⌨️', '🖥', '🖨', '🖱', '🖲', '🕹',
     '🗜', '💽', '💾', '💿', '📀', '📼', '📷', '📸', '📹', '🎥',
@@ -89,12 +85,17 @@ stuff = [
     '🔏', '🔐', '🔒', '🔓'
 ]
 
+all_lists = [
+    sentiments, hands, people, clothings, foods, sports, travel, stuff
+]
+
 import os
 import random
 
 def generate():
     max_length = int(os.getenv("PLANS_MAX_LENGTH", 6))
-    length = random.randint(1, max_length)
+    min_length = int(os.getenv("PLANS_MIN_LENGTH", 2))
+    length = random.randint(min_length, max_length)
     lists = random.choices(all_lists, k=length)
     text = " ".join([random.choice(l) for l in lists])
     return text
