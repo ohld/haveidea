@@ -4,46 +4,78 @@
 }
 
 body {
-    font-family: 'Pribambas', 'sans-serif';
-  }
+  font-family: 'Pribambas', 'sans-serif';
+  background-color: #e0ca68;
+}
 
+header.masthead {
+  position: relative;
+  background-color: #343a40;
+  background-size: cover;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  min-height: 100vh;
+}
+
+header.masthead h1 {
+  font-size: 6rem;
+}
+
+header.masthead .idea-text {
+  font-size: 10rem;
+  padding-top: 3rem;
+}
+
+header.masthead .btn {
+  font-size: 3rem;
+}
+
+/* for desktops */
+@media (min-width: 768px) {
   header.masthead {
-    position: relative;
-    background-color: #343a40;
-    background-size: cover;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    min-height: 100vh;
+      padding-top: 7rem;
+      height: 100vh;
   }
-  
   header.masthead h1 {
-    font-size: 6rem;
+      font-size: 8rem;
+  }
+}
+
+header.idea {
+  position: relative;
+  background-size: cover;
+  /* padding-top: 2rem; */
+  /* padding-bottom: 2rem; */
+  /* max-height: 100vh; */
+}
+
+header.idea h1 {
+  font-size: 4rem;
+}
+
+header.idea .idea-text {
+  font-size: 8rem;
+  /* padding-top: 5rem; */
+}
+
+.idea-footer {
+  font-size: 1.5rem;
+}
+
+/* for desktops */
+@media (min-width: 768px) {
+  header.idea {
+      padding-top: 4rem;
+      /* height: 100vh; */
+  }
+  header.idea h1 {
+      font-size: 7rem;
   }
 
-  header.masthead .idea-text {
-    font-size: 10rem;
-    padding-top: 3rem;
+  header.idea .idea-text {
+    font-size: 8rem;
   }
-
-  header.masthead .btn {
-    font-size: 3rem;
-  }
-  
-  /* for desktops */
-  @media (min-width: 768px) {
-    header.masthead {
-        padding-top: 7rem;
-        height: 100vh;
-    }
-    header.masthead h1 {
-        font-size: 8rem;
-    }
-    header.masthead .idea-text {
-        font-size: 8rem;
-        padding-top: 5rem;
-    }
-  }
-  
+}
 
 
 
@@ -122,20 +154,7 @@ body {
     left: 0;
     opacity: 0.3;
   }
-  
+
   footer.footer {
     padding-top: 1.5rem;
-    /* padding-bottom: 2rem; */
   }
-
-  .idea-footer {
-    font-size: 1.5rem;
-  }
-
-  /* @media (min-width: 768px) { */
-    /* .idea-footer {
-        padding-top: 10rem;
-        padding-bottom: 5rem;
-        font-size: 2rem;
-      } */
-  /* } */
